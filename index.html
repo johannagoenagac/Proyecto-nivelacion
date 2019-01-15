@@ -3,16 +3,94 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css" />
   </head>
+
+
   <body>
-    <div id="root"></div>
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
+      <header>
+        <div class="container"></div>
+          <div class="navbar-fixed">
+              <nav>
+                <div class="nav-wrapper">
+                  <a href="#!" class="brand-logo"><img class="responsive-img" id="pokemon-logo" src="" alt=""></a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                  <ul class="right hide-on-med-and-down">
+                      <li><a href="" id="inicio">Inicio</a></li>
+                      <li> <a id="stats">Estadisticas</a></li>
+                      <li> <a id="champions">Info pokemon</a></li>
+                      
+                  </ul>
+          
+                  </div>
+                </nav>
+                
+                <ul class="sidenav" id="mobile-demo">
+                    <li><a href="" id="inicio">Inicio</a></li>
+                    <li> <a id="stats">Estadisticas</a></li>
+                    <li> <a id="champions">Info pokemon</a></li>
+                </ul>
+          
+                </div>
+              </div>
+      </header>    
+      
+      <div class="container">
+          <div class="row">
+              <div  id="select-filter">    
+                <div id="select1" class="col s12 m6">
+                  <select id="select-type"  >
+                    <option value="">Elige tu categoria</option> 
+                    <option value="Grass">Planta</option>
+                    <option value="Poison">Veneno</option>
+                    <option value="Flying">Volador</option>
+                    <option value="Fire">Fuego</option>
+                    <option value="Water">Agua</option>
+                    <option value="Bug">Bicho</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Electric">Eléctrico</option>
+                    <option value="Ground">Tierra</option>
+                    <option value="Fighting">Peleador</option>
+                    <option value="Psychic">Psiquico</option>
+                    <option value="Rock">Roca</option>
+                    <option value="Ice">Hielo</option>
+                    <option value="Ghost">Fantasma</option>
+                    <option value="Dragon">Dragón</option>
+                  </select>
+                </div>
+              </div>
+              <div>    
+                <div id="select2" class="col s12 m6">
+                  <select id="select-order">
+                    <option value="" selected>Ordenar Por:</option>
+                    <option value="a-z">a-z</option>
+                    <option value="z-a">z-a</option>
+                  </select>
+                </div>
+              </div>    
+            </div>
+            <div id="pokemon-list" class="row" ></div>
+          </div>
+      
+     
+    <div id="root">
+      
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>$(document).ready(function(){
+          $(".button-collapse").sideNav()
+        });
+    </script>
+    <script src="./data/pokemon/pokemon.js"></script> 
     <script src="data.js"></script>
     <script src="main.js"></script>
+
+
   </body>
 </html>
