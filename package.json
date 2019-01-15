@@ -14,5 +14,13 @@
     "eslint-plugin-jest": "^22.1.2",
     "htmlhint": "^0.10.1",
     "jest": "^23.6.0"
+  },
+  "devDependencies": {
+    "htmlhint": "^0.10.1"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true
   }
+  
 }
