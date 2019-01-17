@@ -1,31 +1,57 @@
 body{
-background:#d4e157;
+    background:#d4e157;
 }
 
 .nav-wrapper{
     background-color:#1de9b6;
 }
 
-
-.footer-fixed{
-    background-color: #1de9b6;
+.nav-wrapper a{
+    font-size: 18px;
 }
 
-a.brand-logo{
-    width: 120px;
-    height: 120px;
-    margin: 0%;
-    padding: 0%;
+footer.page-footer{
+    background-color: #1de9b6;
+    height: 70px;
+    bottom:0px;
 }
 
 img#pokemon-logo.responsive-img{
-    width: 120px;
-    height: 120px;
-    margin: 0%;
-
+    width: 200px;
+    height: 200px;
+    margin-top:30px;
 }
 
 div.card{
     height: 230px;
     border-radius: 5%;
+}
+div#select1.col.s12.m6, div#select2.col.s12.m6{
+    margin-top:30px;
+}
+
+#page2{
+    display:none;
+}
+
+#piechart_3d{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom: auto;
+}
+
+ul#mobile-demo.sidenav{
+    background-color:#dce775;
+    width: 200px;
+}
+
+ul#mobile-demo.sidenav a{
+    color: #01579b;
+}
+
+.sidenav-overlay{
+    z-index: 995;
 }
