@@ -3,8 +3,8 @@ global.assert=require('chai').assert;//
 require('../src/data.js');//require: lo que requiero para que corra mi test
 require('../src/data/pokemon/pokemon.js');
 
-describe('pokemon', () => {
-    it('Debería ser un objeto', () => {
+    describe('pokemon', () => {
+       it('Debería ser un objeto', () => {
         window.assert.equal(typeof window.pokemon, 'object');//funcion (parametros a comparar) typeof= me dice si es un objeto
       });
 
@@ -27,7 +27,7 @@ describe('pokemon', () => {
     
       })
 
-      describe('data.sortData',()=>{ //testenado funcion sort
+    describe('data.sortData',()=>{ //testenado funcion sort
         it('Debería ser una funcion',()=>{
             window.assert.equal(typeof window.data.sortData,'function');//typeof si es una función
         });
@@ -48,6 +48,6 @@ describe('pokemon', () => {
     });        
 
 
-      });
+  });
   
     

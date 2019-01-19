@@ -3,15 +3,21 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 window.onload =() =>{
-
+    
+    document.getElementById('start').addEventListener('click',
+    (event) => {
+    event.preventDefault();
+    document.getElementById('page1').style.display='block';
+    document.getElementById('page2').style.display='none';
+});
 
 showCards(window.pokemon)
 
 function showCards(filterData) {
 
-document.getElementById('root').innerHTML = '';
+document.getElementById('root').innerHTML = ''; 
 
-  document.getElementById('pokemon-list').innerHTML = '';
+document.getElementById('pokemon-list').innerHTML = '';
     for (let i = 0; i < filterData.length; i++) {
         document.getElementById('pokemon-list').innerHTML += `
             <div class="col s6 m3" >
@@ -19,6 +25,7 @@ document.getElementById('root').innerHTML = '';
                     <img class="imagen-lol responsive-img" src="${filterData[i].img}" >
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-2"><h6>${filterData[i].name}</h6><i class="material-icons right">more_vert</i></span>
+                        <p style=" color: grey"> Numero: ${ filterData[i].num }</p>
                     </div>
                     <div class="card-reveal">
                         <span class="card-title grey-text text-darken-4">${filterData[i].name}<i class="material-icons right">close</i></span>
@@ -27,9 +34,31 @@ document.getElementById('root').innerHTML = '';
                         <span class="link" data-pokemon='${filterData[i].id}'></span>
                     </div>
                 </div>
-            </div> ` 
+
+             
+                 <!-- Modal Trigger -->
+                 <a class="waves-effect waves-light btn modal-trigger" href="#modal1">ver más</a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                     <div class="modal-content">
+                        <h4>Modal Header</h4>
+                        <p>A bunch of text</p>
+                    </div>
+                 <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                 </div>
+                </div>
+
+            </div> 
+          ` 
       }
+      showCards(filterData);
 }
+
+
+
+
     //Evento para mostrar data filtrada en el select filtrar
     document.getElementById('select-type').addEventListener('change',()=>{
         let condition = document.getElementById('select-type').value;
@@ -82,12 +111,7 @@ document.getElementById('root').innerHTML = '';
         showCards(dataSortNumber);
     });
 
-    document.getElementById("start").addEventListener("click",
-        (event) => {
-        event.preventDefault();
-        document.getElementById("page1").style.display="block";
-        document.getElementById("page2").style.display="none";
-    });
+    
 
 
     //Muestra grafico al presionar estadisticas
@@ -126,8 +150,8 @@ document.getElementById('root').innerHTML = '';
         ]);
 
         var options = {
-            'width':900, 
-            'heigth':500,
+            'width':600, 
+            'heigth':200,
             title: 'My Daily Activities',
             is3D: true,
         };
@@ -158,7 +182,16 @@ document.getElementById('root').innerHTML = '';
         event.preventDefault();
         document.getElementById("page1").style.display="none";
         document.getElementById("page2").style.display="block";
+        
     });
-    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        window.M.Modal.init(elems);
+       
+    });
 
     
+    }
+
+   
