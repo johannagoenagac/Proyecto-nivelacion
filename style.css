@@ -18,8 +18,8 @@ footer.page-footer{
 }
 
 img#pokemon-logo.responsive-img{
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
     display:block;
     margin:auto;
 }
@@ -31,24 +31,18 @@ img#pokebola-logo.responsive-img{
    margin-top:7px;
 }
 
+#page2{
+    display:none;
+}
+
 div.card{
     height: 230px;
     border-radius: 5%;
 }
 
-div#select1.col.s12.m6, div#select2.col.s12.m6{
-    margin-top:-40px;
-}
-
-#page2{
-    display:none;
-}
-
 #piechart_3d{
     display: flex;
     justify-content: center;
-    margin-top:0%;
-   
 }
 
 ul#mobile-demo.sidenav{
@@ -64,8 +58,16 @@ ul#mobile-demo.sidenav a{
     z-index: 995;
 }
 
+a.waves-effect.waves-light.btn.modal-trigger{
+    display: flex;
+    justify-content: center;
+   padding:0px;
+}
+
+
 @media only screen
 and (max-width : 480px) {
+
     img#pokemon-logo.responsive-img{
         width: 150px;
         height: 150px;
@@ -89,6 +91,12 @@ and (max-width : 480px) {
     a.waves-effect.waves-light.btn.modal-trigger{
         display: flex;
         justify-content: center;
+    }
+
+    div.card{
+        width: 170px;
+        height: 220px;
+        border-radius: 5%;
     }
 
     }
