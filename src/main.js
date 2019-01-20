@@ -63,9 +63,13 @@ document.getElementById('pokemon-list').innerHTML = '';
     document.getElementById('select-type').addEventListener('change',()=>{
         let condition = document.getElementById('select-type').value;
         // console.log(condition);
-        let filterData = window.data.filterData(window.pokemon, condition);
-        // console.log(filterData);
-        showCards(filterData);   
+        if (condition !== "All"){
+            let filterData = window.data.filterData(window.pokemon, condition);
+            // console.log(filterData);
+            showCards(filterData);
+        } else {
+            showCards(window.pokemon);
+        }
       });
 
 
@@ -98,18 +102,35 @@ document.getElementById('pokemon-list').innerHTML = '';
 
 
     //Evento imprimir nombre ordenado de a-z y z-a en select ordenar
-    document.getElementById('select-order').addEventListener('change',() => {//metodo change me permite elegir una opcion diferente cada vez
+    document.getElementById('select-order').addEventListener('change',() => {
+        //metodo change me permite elegir una opcion diferente cada vez
+        
         let sortOrder = document.getElementById('select-order').value;
-        let dataSort = window.data.sortData(window.pokemon,'name',sortOrder);
-        showCards(dataSort);
+        if (sortOrder === "a-z"){
+            let dataSort = window.data.sortData(window.pokemon,'name',sortOrder);
+            showCards(dataSort);
+        }
+        if (sortOrder === "z-a"){
+            let dataSort = window.data.sortData(window.pokemon,'name',sortOrder);
+            showCards(dataSort);
+        }
+        if (sortOrder === "1-151"){
+            let dataSortNumber = window.data.sortData(window.pokemon,'num',sortOrder);
+            showCards(dataSortNumber);
+        }
+        if (sortOrder === "151-1"){
+            let dataSortNumber = window.data.sortData(window.pokemon,'num',sortOrder);
+            showCards(dataSortNumber);
+        }
+        if (sortOrder === "AllSort"){
+            let sortOrder = "1-151";
+            let dataSortNumber = window.data.sortData(window.pokemon,'num',sortOrder);
+            showCards(dataSortNumber);
+
+        }
     });
 
-    //Evento imprimir nombre ordenado de 1-151 y 151-1 en select ordenar
-    document.getElementById('select-order').addEventListener('change',() => {
-        let sortOrder = document.getElementById('select-order').value;
-        let dataSortNumber = window.data.sortData(window.pokemon,'num',sortOrder);
-        showCards(dataSortNumber);
-    });
+
 
     
 
