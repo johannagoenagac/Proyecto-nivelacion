@@ -9,6 +9,8 @@ window.onload =() =>{
     event.preventDefault();
     document.getElementById('page1').style.display='block';
     document.getElementById('page2').style.display='none';
+    showCards(filterData);
+    
 });
 
 showCards(window.pokemon)
@@ -45,7 +47,7 @@ document.getElementById('pokemon-list').innerHTML = '';
                         <h4>Modal Header</h4>
                         <p>A bunch of text</p>
                     </div>
-                 <div class="modal-footer">
+                <div class="modal-footer">
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
                  </div>
                 </div>
@@ -53,10 +55,8 @@ document.getElementById('pokemon-list').innerHTML = '';
             </div> 
           ` 
       }
-      showCards(filterData);
+      
 }
-
-
 
 
     //Evento para mostrar data filtrada en el select filtrar
