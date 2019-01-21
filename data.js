@@ -11,55 +11,53 @@ filterData:(data,condition) => { //Funcion filterData
 
 sortData:(data,sortBy,sortOrder) => { //funcion sort 
   let pokemonData = data; 
-  // if(sortOrder===''){
-  //   return pokemonData
-  // }
+
   if(sortBy === "name" && sortOrder === "a-z"){ //Si ordeno por name y mi orden será de la a-z
-    pokemonData.sort((a,b) => { //ordenar
-      if(b.name>a.name){ //si b.name es mayor que a.name entonces me retorna -1
-        return -1;
-      }
-      if(a.name>b.name){ // si a.name es mayor que b.name, retorna 1
-       return 1;
-      }
-      return 0; //si no retorna 0
+  pokemonData.sort((a,b) => { //ordenar
+  if(b.name>a.name){ //si b.name es mayor que a.name entonces me retorna -1
+  return -1;
+   }
+  if(a.name>b.name){ // si a.name es mayor que b.name, retorna 1
+  return 1;
+  }
+  return 0; //si no retorna 0
     });
   }
 
   if(sortBy==="name" && sortOrder === "z-a" ){
-    pokemonData.sort((a,b)=>{
-     if(a.name>b.name){
-      return -1;
+  pokemonData.sort((a,b)=>{
+  if(a.name>b.name){
+  return -1;
   }
-     if(b.name>a.name){
-       return 1;
+  if(b.name>a.name){
+  return 1;
   }
-      return 0;
+  return 0;
   });
     
 }
 
 if(sortBy === "num" && sortOrder === "1-151"){ //Si ordeno por num y mi orden será de la 1-151
-  pokemonData.sort((a,b) => { //ordenar
-    if(b.id>a.id){ //si b.id es mayor que a.id entonces me retorna -1
-      return -1;
-    }
-    if(a.id>b.id){ // si a.id es mayor que b.id, retorna 1
-     return 1;
-    }
-    return 0; //si no retorna 0
-  });
+pokemonData.sort((a,b) => { //ordenar
+if(b.id>a.id){ //si b.id es mayor que a.id entonces me retorna -1
+return -1;
+}
+if(a.id>b.id){ // si a.id es mayor que b.id, retorna 1
+return 1;
+}
+return 0; //si no retorna 0
+});
 }
 
 if(sortBy==="num" && sortOrder === "151-1" ){
-  pokemonData.sort((a,b)=>{
-   if(a.id>b.id){
-    return -1;
+pokemonData.sort((a,b)=>{
+if(a.id>b.id){
+return -1;
 }
-   if(b.id>a.id){
-     return 1;
+if(b.id>a.id){
+return 1;
 }
-    return 0;
+return 0;
 });
   
 }

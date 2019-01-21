@@ -80,12 +80,16 @@ and (max-width : 480px) {
         height: 30px; 
         margin-top:10px;
     }
+
     div#select1.col.s12.m6, div#select2.col.s12.m6{
         margin-top:10px;
     }
-    div#piechart_3d{
-        width: 400px;
-        height: 200px;
+
+    #piechart_3d{
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        height: 150px;
     }
 
     a.waves-effect.waves-light.btn.modal-trigger{
@@ -99,4 +103,4 @@ and (max-width : 480px) {
         border-radius: 5%;
     }
 
-    }
+}
