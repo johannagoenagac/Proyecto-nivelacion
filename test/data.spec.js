@@ -37,6 +37,11 @@ require('../src/data/pokemon/pokemon.js');
           window.assert.equal(pokemonLetterA,'Abra');
       });
 
+      it('Deberia retornar el primer pokemon con letra w',()=>{
+        let pokemonLetterW=window.data.sortData(window.pokemon,'name','z-a')[2].name;
+        window.assert.equal(pokemonLetterW,'Wigglytuff');
+    });
+
       it('Debería retornar el numero 50 de los pokemones ',()=>{
           let pokemonNumber50=window.data.sortData(window.pokemon,'num','1-151')[49].name;
           window.assert.equal(pokemonNumber50,'Diglett');   
