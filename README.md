@@ -9,9 +9,11 @@ Si quieres saber Más entra en el siguiente link
 
 Este producto a sido diseñado para todo aquel que quiera comenzar a jugar Pokemon Go, aquí podras encontrar la información basica para comenzar el juego, podrás ver cuales son los pokemones que podras atrapar, su tipo, numero y algunas estadistcas. 
 
-Para ver la pagina del producto entra en el siguiente link 
+## Intalación
 
-[Pagina url]()
+Para usar nuestra página web no es necesario instalar, descargar o ejecutar algún programa sólo ingresar al siguiente link :
+
+[Link app](https://johannagoenagac.github.io/Proyecto-nivelacion/)
 
 
 ### Paso a paso, como utilizar nuestra pagina web
@@ -72,6 +74,3 @@ El código creado para filtrar, ordenar y calcular los datos es una formula que 
 ![Código](http://i.picasion.com/pic88/82bce8ae2ea105b9de70fa4220b4e852.gif)
 
 
-## Intalación
-
-Para usar nuestra página web no es necesario instalar, descargar o ejecutar algún programa sólo ingresar al siguiente link :
